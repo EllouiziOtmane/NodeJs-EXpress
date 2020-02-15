@@ -4,7 +4,9 @@ const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
   filename: "./index.html"
 });
-module.exports = {
+
+module.exports = (env , argv) =>{
+  return {
   entry: "./src/index.js",
   output: { // NEW
     path: path.join(__dirname, 'dist'),
@@ -13,6 +15,12 @@ module.exports = {
   plugins: [htmlPlugin],
   module: {
     rules: [
+      
+        {
+            test: /\.(png|svg|jpg|gif)$/,
+            loader: "file-loader",
+            options: { name: '/static/[name].[ext]' }
+        },
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
@@ -22,6 +30,7 @@ module.exports = {
         }
       ]
   }
+};
 };
 
 

@@ -1,8 +1,8 @@
 {
-  "name": "TP1",
+  "name": "tp1",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.conf.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,8 +18,10 @@
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "express": "^4.17.1",
+    "file-loader": "^5.0.2",
     "html": "^1.0.0",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "webpack": "^4.41.6"
   },
@@ -27,5 +29,3 @@
     "webpack-cli": "^3.3.11"
   }
 }
-
-

@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 
 const path = require('path');
 const DIST_DIR = path.join(__dirname, '../dist');
-
+app.use(express.static(DIST_DIR));
 const mockResponse = {
   foo: 'bar',
   bar: 'foo'
