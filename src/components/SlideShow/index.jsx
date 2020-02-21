@@ -30,7 +30,7 @@ const SLIDES = [
     type: 'content', title: 'TP 4', text: 'Le TP 4', visible: true, notes: '',
   },
   {
-    type: 'title', title: 'Question ...?', visible: true, notes: '',
+    type: 'title', title: 'Question ... ???', visible: true, notes: '',
   },
 ];
 class SlideShow extends Component {

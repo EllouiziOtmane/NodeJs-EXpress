@@ -1,33 +1,60 @@
-TP 2
 
-# Decsription
+######   TP1 / TP2 / TP3     ######
 
-L’objectif du TP est de mettre en place une Single Page Application (SPA) permettant de créer et controler des présentations. Elle sera développée principalement côté client avec React, avec un serveur Node/Express léger. Client et serveur seront codés en JavaScript.
+## Auteur:
 
-### Informations générales:
 
-Notre travail a été réalisé sur le repo :
+# Objectif du TP:
 
-<https://github.com/abdelhakim-baalouach/NodeJs-Express.git>
+Mise en place une Single Page Application (SPA) permettant de créer et controler des présentations. Elle sera développée principalement côté client avec React, avec un serveur Node/Express léger. Client et serveur seront codés en JavaScript.
 
-### Tache 1:
+Les points suivants seront abordés
 
-# Commands to run projects
+La mise en place d’un serveur Express
+L’automatisation avec Webpack
+configuration Webpack / Babel / ESlint
+Création d'un projet React 
+Gestion des états et flux de données
+Gestion de routes React
+Redux pour la gestion avancée des états
+Middleware pour gérer des effets de bord
+Design responsive et adaptatif
 
-## install
 
-\$ git clone https://github.com/abdelhakim-baalouach/NodeJs-Express.git
+## Chemin du dossier Projet:
 
-\$ cd NodeJs-Express
+D:\TIW\Technologies_Web_synchrones_et_multi_dispositifs\web\TP3\NodeJs-EXpress
 
-\$ npm install
 
-## Simple run
+# Packages installés:
 
-- npm start lance le serveur et permet de tester le projet.
-- npm run build Construit le projet en mode de production
-- npm run build Construit le projet en mode de développement
+npm webpack
+npm babel-loader
+npm bootstrap
+npm express
+npm react
+npm react-bootstrap
+npm react-dev-tools
+npm react-dom
+npm react-router-dom
+npm style-loader
 
-## Author :
+## cmd Github:
 
-- **BAALOUACH Abdelhakim** 11934327
+git add .
+git commit -m "Mise en place de Webpack / babel"
+git remote add origin https://github.com/EllouiziOtmane/NodeJs-EXpress.git
+git push -u origin master
+
+## Lien du TP sur GitHub:
+
+https://github.com/EllouiziOtmane/NodeJs-EXpress.git
+
+
+## Execution:
+
+npm run build: construction / préparation du projet.
+npm run dev : Lancement du projet en mode dév ( les modifications exécutés à fil de l'eau)
+npm start : Démarrage du serveur pour tester le projet.
+
+
