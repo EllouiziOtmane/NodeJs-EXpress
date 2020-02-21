@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-// import LOGO from '../static/logo.png';
+import React from "react";
+import ReactDOM from "react-dom";
+import { HashRouter, Route, Redirect } from "react-router-dom";
+import SlideShow from "./components/SlideShow/index.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../static/css/style.css";
 
-const Index = () => {
-  return (
-      <div>
-        <div>TP1! Ellouizi Otmane :) </div>
-      </div>
-  );
-};
-ReactDOM.render(<Index />, document.getElementById('root'));
+const Index = () => (
+  <div className="full-page">
+    <HashRouter>
+      <Route path="/:page" component={SlideShow} />
+      <Redirect from="/" to="/1" />
+    </HashRouter>
+  </div>
+);
+ReactDOM.render(<Index />, document.getElementById("root"));

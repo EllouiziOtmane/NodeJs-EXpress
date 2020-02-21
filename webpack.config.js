@@ -1,25 +1,30 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const path = require('path');
+const path = require("path");
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
   filename: "./index.html"
 });
-
-module.exports = (env , argv) =>{
+module.exports = (env, argv) => {
+  console.log(argv.mode);
   return {
-  entry: "./src/index.js",
-  output: { // NEW
-    path: path.join(__dirname, 'dist'),
-    filename: "[name].js"
-  }, // NEW Ends
-  plugins: [htmlPlugin],
-  module: {
-    rules: [
-      
+    entry: "./src/index.jsx",
+    output: {
+      // NEW
+      path: path.join(__dirname, "dist"),
+      filename: "[name].js"
+    }, // NEW Ends
+    devtool: "eval-source-map",
+    plugins: [htmlPlugin],
+    module: {
+      rules: [
         {
-            test: /\.(png|svg|jpg|gif)$/,
-            loader: "file-loader",
-            options: { name: '/static/[name].[ext]' }
+          test: /\.(png|svg|jpg|gif)$/,
+          loader: "file-loader",
+          options: { name: "/static/[name].[ext]" }
+        },
+        {
+          test: /\.svg$/,
+          use: ["@svgr/webpack"]
         },
         {
           test: /\.(js|jsx)$/,
@@ -27,11 +32,14 @@ module.exports = (env , argv) =>{
           use: {
             loader: "babel-loader"
           }
+        },
+        {
+          test: /\.css$/,
+          use: ["style-loader", "css-loader"]
         }
       ]
-  }
-};
-};
+    },
 
-
-  
+    watch: argv.mode === "development"
+  };
+};
