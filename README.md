@@ -3,6 +3,8 @@
 
 ## Auteur:
 
+Ellouizi Otmane
+ID: p1934328
 
 # Objectif du TP:
 
@@ -57,4 +59,22 @@ npm run build: construction / préparation du projet.
 npm run dev : Lancement du projet en mode dév ( les modifications exécutés à fil de l'eau)
 npm start : Démarrage du serveur pour tester le projet.
 
+## Hébérgement sur Heroku:
+
+1. Création d'une nouvelle application sur Heroku ( pour moi je l'ai nomé reactslideshow ).
+2. Pour vérifier qu'une télécommande nommée herokua été définie pour notre application:   
+
+   git remote -v
+
+3. Ajouter une télécommande à notre référentiel local avec la heroku git:remotecommande:
+
+   heroku git:remote -a reactslideshow
+
+4. Déploiyer notre application sur Heroku:
+
+   git push heroku master
+
+## Lien de notre application sur Heroku
+
+   https://reactslideshow.herokuapp.com/
 
